@@ -30,33 +30,33 @@
                 <img src="icons/stocks.png" alt="menuImage" class="imgMenu">
             </div>
             <div class="navContent">
-                <div class="nav" id="acceuil">
+                <div class="nav onglet active" data-anim="1" >
                     <div class="icone"> <img src="icons/" alt=""></div>
                     <span class="texteNav">ACCEUILL</span>
                 </div>
-                <div class="nav">
+                <div class="nav onglet" data-anim="2">
                     <div class="icone"></div>
                     <span class="texteNav">STOCK</span>
                 </div>
-                <div class="nav">
+                <div class="nav onglet" data-anim="3">
                     <div class="icone"></div>
                     <span class="texteNav">HISTORIQUE</span>
                 </div>
-                <div class="nav">
+                <div class="nav onglet" >
                     <div class="icone"></div>
                     <span class="texteNav">AIDE</span>
                 </div>
             </div>
         </div>
         <div class="dataContainer"> 
-            <div class="home activeContenu">
+            <div class="home contenu activeContenu" data-anim="1">
 
                 <div class="produitContainer">
                     <div class="box">
                         <div class="pic1"></div>
                         <p>CREATION DE FICHIER</p>
                     </div>
-                    <div class="box">
+                    <div class="box onglet " data-anim="4">
                         <div class="pic2"></div>
                         <p>Ajout de nouveau produit</p>
                     </div>
@@ -84,7 +84,28 @@
             </div>
         </div>
             </div>
-            <div class="ajout hide"> 
+            <div class="stockContainer contenu hide" data-anim="2">
+                <h1>Les produit disponible dans le Stock</h1>
+                <table class="tabStyle">
+                    <thead>
+                        <th>NOM</th>
+                        <th>NUMERO</th>
+                        <th>STOCK</th>
+                    </thead>
+                    <Tbody id="productList">
+                        <tr>
+                            <td>Hazo</td>
+                            <td>1246</td>
+                            <td>32155kg</td>
+                            <td class="suppr"></td>
+                            <td class="modif"></td>
+                        </tr>
+
+                    </Tbody>
+                </table>
+            </div>
+            <div class="historique contenu hide" data-anim="3"></div>
+            <div class="ajout contenu hide" data-anim="4"> 
                 <div class="imageProduiAdd">
                     <img src="icons/stock.png" alt="imageProduiAdd">
                 </div>
@@ -96,15 +117,22 @@
                     <input type="number" id="numeroId" class="inputAdd"> <br>
                     <label for="stock">STOCK</label> <br>
                     <input type="number" id="stock" class="inputAdd"><br>
+                    <div class="imageAdd">
+                        <img src="icons/inviter.png" alt="add" class="add">
+                        <p>Appuyer ici pour ajouter</p>
+                    </div>
                 </form>
-            </div>
-            <div class="imageAdd">
-                <img src="icons/inviter.png" alt="add" class="add">
-                <p>Appuyer ici pour ajouter</p>
             </div>
             <p class="finalAdd">
                 Lorem ipsum dolor sit amet.
         </p>
+           
+    
+   
+   
+            </div>
+
+
         </div>
         </div>
     </div>

@@ -455,17 +455,7 @@ margin-bottom: 10px;
         font-size: 20px;
     }
 }
-/* @media screen and (max-width:327px) {
-    .box{
-     
-        height: 100px;
-        width: 110px;
-    
-    }
-    .box p{
-        font-size: 10px;
-    }
-} */
+
 /*----------------ANIMATION---------------------------*/
 .nav:hover{
     background: #647B98;
@@ -484,13 +474,13 @@ margin-bottom: 10px;
 
                 /* AJOUT PAGE */
 
-.ajout{
-    position: relative;
+ .ajout{
+    position:absolute;
     display: flex;
     width:100%;
+    height:100%;
     align-items: center;
     justify-content:space-around;
-    margin-top: 40px;
     flex-wrap: wrap;
     opacity: 0;
 }
@@ -498,25 +488,34 @@ margin-bottom: 10px;
     width:auto;
     height: auto;
 font-size: 23px;
-padding: 40px;
+padding: 20px;
 border-radius: 5px;
 box-shadow: 0px 0px 2px .5px #0A043C;
 }
 .inputAdd{
-    height:40px;
+    height:35px;
     width: 300px;
     border-radius: 9999px;
     margin:15px
 }
 .imageAdd{
     text-align: center;
-    height: 200px;
-    width: 200px;
+    height: 110px;
+    width: 120px;
+border-radius: 10px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+    cursor: pointer;
     border: 1px solid;
+    padding: 20px 5px;
 }
 .add{
-  height: 100%;
-  width: 100%;
+  height:60px;
+  width: 60px;
 }
 .imageProduiAdd{
     height: 200px;
@@ -534,84 +533,24 @@ box-shadow: 0px 0px 2px .5px #0A043C;
 }
 
 /* responsive */
-@media screen and (max-width:1081px)
- {
-    .imageProduiAdd{
-        display: none;
-    }
-    .imageAdd{
-        text-align: center;
-        height: 150px;
-        width: 150px;
-        border: 1px solid;
-    }
+@media screen and (max-width:732px) {
     .formAdd {
         width:auto;
         height: auto;
     font-size: 18px;
-    padding: 30px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 2px .5px #0A043C;
+    padding: 15px;
     }
-    .inputAdd{
-        height:40px;
-        width: 250px;
-        border-radius: 9999px;
-        margin:10px
-    }
-}
-@media screen and (max-width:538px) {
-    .ajout{
-   flex-direction: column;
-    }
-    .formAdd {
-        width:auto;
-        height: auto;
-    font-size: 15px;
-    padding: 30px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 2px .5px #0A043C;
-    }
-    .imageAdd{
-        text-align: center;
-        height: 100px;
-        width: 100px;
-        border: 1px solid;
-    }
-     
     .inputAdd{
         height:30px;
-        width: 250px;
+        width: 295px;
         border-radius: 9999px;
-        margin:10px
+        margin:15px
     }
-    
 }
-@media screen and (max-width:382px) {
-         .formAdd {
-        width:auto;
-         height: auto;
-         font-size: 12px;
-         padding: 30px;
-         border-radius: 5px;
-         box-shadow: 0px 0px 2px .5px #0A043C;
-         }
-         .inputAdd{
-             height:20px;
-             width: 150px;
-             border-radius: 9999px;
-             margin:10px
-         }
-         .finalAdd{
-          display: none;
-         }
-         .imageAdd{
-            text-align: center;
-            height: 100px;
-            width: 100px;
-            border: 1px solid;
-        }
-         
+@media screen and (max-width:688px) {
+    .finalAdd{
+        display: none;
+    }
 }
 
     /* Changement de page */
@@ -631,4 +570,36 @@ box-shadow: 0px 0px 2px .5px #0A043C;
          
             visibility: visible;
         }
+    }
+
+
+
+
+    /*liste des produit*/
+    .tabStyle{
+        width: 80%;
+        height: auto;
+        border-collapse: collapse;
+        border: 1px solid;
+        font-size:20px;
+    }
+    .tabStyle th{
+        border: 1px solid;
+        padding: 10px;
+    }
+    .tabStyle td{
+        border: 1px solid;
+        padding: 5px;
+        font-size: 18px;
+        text-align: center;
+    }
+    .suppr{
+        height: auto;
+        width: auto;
+        background: red;
+    }
+    .modif{
+        height: auto;
+        width: auto;
+        background: rgb(9, 228, 49);
     }
