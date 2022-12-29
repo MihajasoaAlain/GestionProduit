@@ -1,6 +1,7 @@
 const onglets = document.querySelectorAll('.onglet');
 const contenu = document.querySelectorAll('.contenu');
 let index =0;
+let nbr =0;
 onglets.forEach(onglet =>{
 
     onglet.addEventListener('click',()=>
@@ -30,37 +31,45 @@ onglets.forEach(onglet =>{
     })
 });
 // Ajout de nouveau produit
+const nbrProduit =0;
 const bouton = document.querySelector('.imageAdd');
 const tabContainer = document.querySelector('#productList');
 bouton.addEventListener('click',()=>{
     const nom = document.querySelector('#nom').value;
-    
     const identif = document.querySelector('#numeroId').value;
     const stock = document.querySelector('#stock').value;
         const product =[nom,identif,stock];
         if (product[0]!=''&& product[1]!=''&&product[2]!=''){
              localStorage.setItem(nom,JSON.stringify(product));
-            for (let i = 1; i<localStorage.length;i++){
-                const key =localStorage.key(i);
-                console.log(key)
-                const item = JSON.parse(localStorage.getItem(key));
-                console.log(item);
-                    //Affichage du contenu du tableau
-
-                            const row = document.createElement('tr');
-                            const cell_Nom = document.createElement('td');
-                            const cell_id = document.createElement('td');
-                            const cell_Stock = document.createElement('td');
-                            cell_Nom.textContent =item[0];
-                            cell_id.textContent = item[1];
-                            cell_Stock.textContent =item[2];
-                            row.appendChild(cell_Nom);
-                            row.appendChild(cell_id);
-                            row.appendChild(cell_Stock);
-                            tabContainer.appendChild(row);
-                        }
                         console.log('ajout effectuer');
-        }
+                      let item = JSON.parse(localStorage.getItem(nom));
+                        creation(item);
+                                        nbr++;
+                                    }
+        });
+const navStock = document.querySelector('#navStock');
+navStock.addEventListener('click',()=>{
+   if(nbr == 0){
+    for (let i =0; i<localStorage.length; i++){
+        let key = localStorage.key(i);
+        let item = JSON.parse(localStorage.getItem(key));
+            creation(item);
+    }
+   }
+        
 });
+function creation(item){
+    const row = document.createElement('tr');
+    const cell_Nom = document.createElement('td');
+    const cell_id = document.createElement('td');
+    const cell_Stock = document.createElement('td');
+    cell_Nom.textContent =item[0];
+    cell_id.textContent = item[1];
+    cell_Stock.textContent =item[2];
+    row.appendChild(cell_Nom);
+    row.appendChild(cell_id);
+    row.appendChild(cell_Stock);
+    tabContainer.appendChild(row);
+}
 
 

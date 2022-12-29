@@ -603,3 +603,6 @@ border-radius: 10px;
         width: auto;
         background: rgb(9, 228, 49);
     }
+    tr:nth-child(odd){
+        background: rgb(123, 100, 100);
+    }
