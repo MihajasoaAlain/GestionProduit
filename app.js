@@ -30,44 +30,37 @@ onglets.forEach(onglet =>{
     })
 });
 // Ajout de nouveau produit
-const produit = {};
-
 const bouton = document.querySelector('.imageAdd');
-const boxProduit = document.querySelector('#productList');
-
+const tabContainer = document.querySelector('#productList');
 bouton.addEventListener('click',()=>{
-    const nom = document.querySelector('#nom');
-    const identif = document.querySelector('#numeroId');
-    const stock = document.querySelector('#stock');
-        const product ={
-            productNom : nom,
-            productID :identif,
-            productStock : stock
-        };
-        localStorage.setItem(product.productNom,JSON.stringify(product));
-            for (let i = 0; i<localStorage.length;i++){
+    const nom = document.querySelector('#nom').value;
+    
+    const identif = document.querySelector('#numeroId').value;
+    const stock = document.querySelector('#stock').value;
+        const product =[nom,identif,stock];
+        if (product[0]!=''&& product[1]!=''&&product[2]!=''){
+             localStorage.setItem(nom,JSON.stringify(product));
+            for (let i = 1; i<localStorage.length;i++){
                 const key =localStorage.key(i);
+                console.log(key)
                 const item = JSON.parse(localStorage.getItem(key));
-                creation(item);
-            }
-});
-    function creation(item){
-        const row = document.createAttribute('tr');
-        const name = document.createElement('td');
-        const identification = document.createElement('td');
-        const stock = document.createElement('td');
-        const suppr = document.createElement('td');
-        const ajoutP = document.createElement('td');
-        name.textContent = item.productNom;
-        identification.textContent= item.productID;
-        stock.textContent = item.productStock;
-        // name.appendChild(row);
-        // identification.appendChild(row);
-        // stock.appendChild(row);
-        // suppr.appendChild(row);
-        // ajoutP.appendChild(row);
-        // row.appendChild(boxProduit);
-    }
+                console.log(item);
+                    //Affichage du contenu du tableau
 
+                            const row = document.createElement('tr');
+                            const cell_Nom = document.createElement('td');
+                            const cell_id = document.createElement('td');
+                            const cell_Stock = document.createElement('td');
+                            cell_Nom.textContent =item[0];
+                            cell_id.textContent = item[1];
+                            cell_Stock.textContent =item[2];
+                            row.appendChild(cell_Nom);
+                            row.appendChild(cell_id);
+                            row.appendChild(cell_Stock);
+                            tabContainer.appendChild(row);
+                        }
+                        console.log('ajout effectuer');
+        }
+});
 
 
