@@ -20,7 +20,7 @@
                   <div class="grandTitre">
                     <p>GESTION DE PRODUIT DE RECHANGE</p> 
                         <form action="" class="buttonSearch">
-                    <img src="icons/loupe.png" alt="loupe recherche" class="loupe iconeSearch">
+                    <img src="icons/loupe.png" alt="loupe recherche" class="loupe iconeSearch onglet" data-anim="6">
                              <input type="search" id="recherche" >
                         </form>
                     </div>
@@ -42,7 +42,7 @@
                     <div class="icone"></div>
                     <span class="texteNav">HISTORIQUE</span>
                 </div>
-                <div class="nav onglet" >
+                <div class="nav onglet" data-anim="4" >
                     <div class="icone"></div>
                     <span class="texteNav">AIDE</span>
                 </div>
@@ -52,27 +52,27 @@
             <div class="home contenu activeContenu" data-anim="1">
 
                 <div class="produitContainer">
-                    <div class="box">
+                    <div class="box onglet">
                         <div class="pic1"></div>
-                        <p>CREATION DE FICHIER</p>
+                        <p>BOND ENTREE/SORTIE</p>
                     </div>
-                    <div class="box onglet " data-anim="4">
+                    <div class="box onglet " data-anim="5" >
                         <div class="pic2"></div>
                         <p>Ajout de nouveau produit</p>
                     </div>
-                    <div class="box">
+                    <div class="box onglet" data-anim="2">
                         <div class="pic3"></div>
                         <p>Suppression de produit</p>
                     </div>
-                    <div class="box">
+                    <div class="box onglet" data-anim="2">
                         <div class="pic4"></div>
                         <p>Modification de produit</p>
                     </div>
-                    <div class="box"> 
+                    <div class="box onglet"> 
                         <div class="pic5"></div>
                         <p>Mise a jour de stock Produit</p>
                     </div>
-                    <div class="box"> 
+                    <div class="box onglet"> 
                         <div class="pic6"></div>
                     <p>Quitter</p>
                 </div>
@@ -86,20 +86,23 @@
             </div>
             <div class="stockContainer contenu hide" data-anim="2">
                 <h1>Les produit disponible dans le Stock</h1>
-                <table class="tabStyle">
-                    <thead>
-                        <th>NOM</th>
-                        <th>NUMERO</th>
-                        <th>STOCK</th>
-                    </thead>
-                    <Tbody id="productList">
-                       
-
-                    </Tbody>
-                </table>
+                <div class="produitData">
+                    <div class="donnerStock">
+                    </div>
+                </div>
+                <div class="refresh">
+                    <img src="icons/update.png" alt="">
+                </div>
+              
             </div>
             <div class="historique contenu hide" data-anim="3"></div>
-            <div class="ajout contenu hide" data-anim="4"> 
+            <div class="help contenu hide" data-anim="4">
+  ma explicabo ab dolor tempora deserunt accusantium doloribus ipsa fugit rerum iste non debitis nobis doloremque quasi quae maiores voluptatem commodi. Atque, sed porro.
+          spernatur illum error cupiditate illo doloribus blanditiis. Alias fugit fugiat earum ipsam magnam quod quisquam tempora, nam possimus itaque unde animi accusamus!
+                Repellendus provident vero deleniti enim perspiciatis necessitatibus architecto dolores, aut obcaecati explicabo veniam! Recusandae earum tenetur iste deserunt eos aliquam nemo pariatur explicabo sed, amet voluptatem saepe. Eum, illum corporis!
+                Dolores aut nesciunt quasi eius placeat provident voluptatum eveniet, nostrum suscipit voluptates qui fugit dolor, magni quam quibusdam id voluptas iure dicta animi, aperiam quis labore dolorum distinctio! Voluptas, totam.
+            </div>
+            <div class="ajout contenu hide" data-anim="5"> 
                 <div class="imageProduiAdd">
                     <img src="icons/stock.png" alt="imageProduiAdd">
                 </div>
@@ -124,6 +127,8 @@
     
    
    
+            </div>
+            <div class="ProductSearch contenu hide" data-anim="6">
             </div>
 
 

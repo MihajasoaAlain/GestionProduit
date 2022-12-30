@@ -59,6 +59,8 @@ body{
     height: 26px;
     margin: auto 2px;
     border-radius: 9999px;
+    padding: 5px;
+    font-size: 13px;
 }
 /* -------------------------------------------- */
 
@@ -571,38 +573,81 @@ border-radius: 10px;
             visibility: visible;
         }
     }
-
-
-
-
     /*liste des produit*/
-    .tabStyle{
-        width: 80%;
-        height: auto;
-        border-collapse: collapse;
-        border: 1px solid;
-        font-size:20px;
-    }
-    .tabStyle th{
-        border: 1px solid;
-        padding: 10px;
-    }
-    .tabStyle td{
-        border: 1px solid;
-        padding: 5px;
-        font-size: 18px;
+    .stockContainer h1{
         text-align: center;
     }
+    .donnerStock{
+        display: flex;
+       
+    }
+    .productItems{
+        display: flex;
+        justify-content: space-between;
+        height:35px;
+        border: 1px solid;
+        width: 80%;
+        border-radius: 9999px;
+        padding-right: 5px;
+        margin: 10px;
+        overflow: hidden;
+        background: #ddd;
+       
+
+    }
+    .identif{
+        margin-right: 10px;
+        font-size: 20px;
+        text-align: center;
+        width:auto;
+        padding-right: 10px;
+        padding-left: 2px;
+        border-right: 1px solid;
+        line-height: 35px;
+        border-left: 1px solid;
+        background: #dddd;
+
+
+    }
+    .donnerStock p{
+        font-size: 20px;
+        line-height: 35px;
+        width: 100px;
+    }
     .suppr{
-        height: auto;
-        width: auto;
-        background: red;
+        width: 35px;
+        height: 35px;
+        margin: 10px;
+ background-image: url(icons/moins1.png);
+ background-size: cover;
+ border-radius: 50%;
     }
     .modif{
-        height: auto;
-        width: auto;
-        background: rgb(9, 228, 49);
+        width: 35px;
+        height: 35px;
+        margin: 10px;
+background-image: url(icons/modifier.png);
+background-size: cover;
+border-radius: 50%;
     }
-    tr:nth-child(odd){
-        background: rgb(123, 100, 100);
+    .produitData{
+        height: 500px;
+        width: 70%;
+        border: 1px solid;
+        margin: 10px 20px ;
+        border-radius: 10px;
+        background: #647B98;
+        overflow-y: scroll;
+    }
+    .ProductSearch{
+        width: 100%;
+        height: 100%;
+    }
+    .help{
+        position: relative;
+        width: 80%;
+        font-size: 20px;
+        background: #647B98;
+        padding: 10px;
+        margin: 100px auto;
     }
