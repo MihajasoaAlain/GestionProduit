@@ -2,6 +2,7 @@ const onglets = document.querySelectorAll('.onglet');
 const contenu = document.querySelectorAll('.contenu');
 let index =0;
 let nbr =0;
+
 onglets.forEach(onglet =>{
 
     onglet.addEventListener('click',()=>

@@ -112,9 +112,13 @@ position: relative;
 .icone{
     height: 25px;
     width: 25px;
-    background: #000;
     display: inline-block;
     margin: auto 5px;
+}
+.icone img{
+    height: 100%;
+    width: 100%;
+    background: transparent;
 }
 /*----------------------------RESPONSIVE DE L'INTERFACE------------------------------------*/
 @media screen and (max-width:1080px) {
@@ -626,7 +630,7 @@ border-radius: 10px;
         width: 35px;
         height: 35px;
         margin: 10px;
-background-image: url(icons/modifier.png);
+background-image: url(icons/btnModif.png);
 background-size: cover;
 border-radius: 50%;
     }
@@ -650,4 +654,22 @@ border-radius: 50%;
         background: #647B98;
         padding: 10px;
         margin: 100px auto;
+    }
+    .refresh{
+        width: 35px;
+        height: 35px;
+        margin: 10px;
+        border-radius: 50%;
+    }
+    .refresh img{
+        height: 100%;
+        width: 100%;
+    }
+    .StockPrincipale{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .refresh:hover{
+        cursor: pointer;
     }
