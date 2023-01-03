@@ -149,4 +149,22 @@ function creation(item,i){
             alert ("produit don't existe");
 
         }
-     })
+     });
+
+
+     /*bond */
+     const bond = document.querySelector('.bond');
+        bond.addEventListener('click',selectProduct());
+function selectProduct(){
+    const listeProduct = querySelector('.listeProduct');
+    for(let i = 0 ; i<localStorage.length ; i++){
+        let key = localStorage.key(i);
+        let data = document.createElement('option');
+        let product= JSON.parse(localStorage.getItem(key));
+        data.textContent = product[0];
+        console.log(data);
+        listeProduct.appendChild(data);
+    }
+}
+
+    

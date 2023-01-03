@@ -679,3 +679,32 @@ border-radius: 50%;
     .refresh:hover{
         cursor: pointer;
     }
+
+
+
+
+    /*BOND ENTRER SORTIE*/
+.bond{
+    margin: 100px;
+    text-align: center;
+    border: 1px solid;
+    width: 60%;
+    padding: 20px;
+}
+    .bondDate{
+        border: 1px solid;
+        width: 60%;
+        height: auto;
+        padding: 15px;
+        font-size: 20px;
+        text-align: center;
+        margin: 5px 50%;
+        transform: translateX(-50%);
+    }
+.confirme{
+    margin-top: 5px;
+    border: 1px solid;
+    padding: 5px 10px;
+    font-size: 20px;
+    border-radius: 20px;
+}

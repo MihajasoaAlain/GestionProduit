@@ -49,7 +49,7 @@
             </div>
         </div>
         <div class="dataContainer"> 
-            <div class="home contenu activeContenu" data-anim="1">
+            <div class="home contenu hide" data-anim="1">
 
                 <div class="produitContainer">
                     <div class="box onglet">
@@ -93,7 +93,9 @@
                
               
             </div>
-            <div class="historique contenu hide" data-anim="3"></div>
+            <div class="historique contenu hide" data-anim="3">
+                alain
+            </div>
             <div class="help contenu hide" data-anim="4">
   ma explicabo ab dolor tempora deserunt accusantium doloribus ipsa fugit rerum iste non debitis nobis doloremque quasi quae maiores voluptatem commodi. Atque, sed porro.
           spernatur illum error cupiditate illo doloribus blanditiis. Alias fugit fugiat earum ipsam magnam quod quisquam tempora, nam possimus itaque unde animi accusamus!
@@ -127,6 +129,28 @@
    
             </div>
             <div class="ProductSearch contenu hide" data-anim="6">
+            </div>
+            <div class="bond contenu activeContenu">
+            <h2>BOND ENTRER / SORTIE</h2>
+                <form>
+                        <input type="radio" id="bondEntrer" name="bond" value="bondEntrer">
+                        <label for="bondEntrer">BOND ENTRER</label> <br>
+                        <input type="radio" id="bonSortie" name="bond" value="bonSortie">
+                        <label for="bondEntrer">BOND SORTIE</label><br><br>
+                        <div class="bondDate">
+                            <label for="entrer">DATE</label>
+                            <input type="date" id="entrer"><br><br>
+                            <label for="sortie">DATE SORTIE DU PRODUIT</label>
+                            <input type="date" id="sortie">
+                        </div>
+                        <button class="confirme">CONFIRMER</button>
+                </form> 
+                <div class="listeProduct">
+                    <select name="produit" id="">produit
+                        <option value="">vary</option>
+                    </select>
+                </div>
+               
             </div>
 
 
