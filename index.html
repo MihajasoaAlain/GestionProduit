@@ -138,18 +138,20 @@
                         <input type="radio" id="bonSortie" name="bond" value="bonSortie">
                         <label for="bondEntrer">BOND SORTIE</label><br><br>
                         <div class="bondDate">
-                            <label for="entrer">DATE</label>
-                            <input type="date" id="entrer"><br><br>
-                            <label for="sortie">DATE SORTIE DU PRODUIT</label>
-                            <input type="date" id="sortie">
+                            <label for="StockValue">stock</label>
+                            <input type="number" id="StockValue"> <br>
+                            <label for="sortie">DATE</label>
+                            <input type="date" id="sortie" placeholder="10/01/2023">
+                            <div class="listeProduct">
+                                <label for="listeProduit">produit</label>
+                                <select name="produit" class="productSelect" id="listeProduit">
+                                </select>
+                            </div>
                         </div>
                         <button class="confirme">CONFIRMER</button>
+                      
                 </form> 
-                <div class="listeProduct">
-                    <select name="produit" id="">produit
-                        <option value="">vary</option>
-                    </select>
-                </div>
+              
                
             </div>
 

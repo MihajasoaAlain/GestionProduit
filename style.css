@@ -691,15 +691,17 @@ border-radius: 50%;
     width: 60%;
     padding: 20px;
 }
-    .bondDate{
+  .bondDate{
         border: 1px solid;
-        width: 60%;
-        height: auto;
+        width: 40%;
+        height: 200px;
         padding: 15px;
         font-size: 20px;
         text-align: center;
         margin: 5px 50%;
         transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
     }
 .confirme{
     margin-top: 5px;
